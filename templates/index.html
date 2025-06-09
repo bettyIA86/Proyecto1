@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Calidad del Aire en Londres - 2024</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1>Calidad del Aire en Londres - 2024</h1>
+    <p>En 2024, Londres experimentó mejoras significativas en la calidad del aire. Las concentraciones de dióxido de nitrógeno (NO₂) disminuyeron en un 49% desde 2016 hasta 2023, y las de partículas finas (PM₂.₅) en un 50% en el mismo período.
+      Estas mejoras se atribuyen a políticas como la expansión de la Zona de Ultra Bajas Emisiones (ULEZ) y la implementación de zonas de bajas emisiones (LEZ), que han reducido la cantidad de vehículos contaminantes en las calles.
+      A pesar de estos avances, algunas áreas de Londres aún superan los límites recomendados por la Organización Mundial de la Salud (OMS) para NO₂ y PM₂.₅, lo que indica que se requieren esfuerzos continuos para mejorar la calidad del aire en toda la ciudad.
+    </p>
+  </div>
+  <div class="Grafica">
+    <h1>Grafico de contaminantes atmosfericos Modelo Entrenado Random Forest</h1> 
+	<img src="{{ url_for('static', filename='images/plot_CO.png') }}"> 
+  <br>
+  <img src="{{ url_for('static', filename='images/plot_NO2.png') }}">
+  <br>
+  <img src="{{ url_for('static', filename='images/plot_SO2.png') }}">
+  <br>
+  <img src="{{ url_for('static', filename='images/plot_O3.png') }}">
+  <br>
+  <img src="{{ url_for('static', filename='images/plot_PM2.5.png') }}">
+  <br>
+  <img src="{{ url_for('static', filename='images/plot_PM10.png') }}">
+  <br>
+  <img src="{{ url_for('static', filename='images/plot_AQI.png') }}">
+  </div>
+<!--<div id="image-container">
+    
+</div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    $(document).ready(function() {
+        $('#generate-images').click(function() {
+            $.ajax({
+                url: '/calcular',
+                type: 'POST',
+                success: function(response) {
+                    $('#image-container').html(response);
+                }
+            });
+        });
+    });
+</script>-->
+  <script src="{{ url_for('static', filename='index.js') }}">
+  </script>
+</body>
+</html>

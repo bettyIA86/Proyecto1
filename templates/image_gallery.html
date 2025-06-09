@@ -1,0 +1,5 @@
+<div id="image-gallery">
+    {% for filename in filenames %}
+        <img src="{{ url_for('static', filename='images/' + filename) }}" alt="Gráfico generado">
+    {% endfor %}
+</div>
